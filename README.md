@@ -32,7 +32,7 @@
 ## Etapas da prova
 
 ### Etapa 1: Manipulação de Clientes e Empréstimos
-*1.1 Identificar clientes e gerar empréstimos para eles.
+1.1 Identificar clientes e gerar empréstimos para eles.
 1.2 Cadastrar 50 novos clientes (use a biblioteca Faker para gerar dados falsos).
 1.3 Incluir novos empréstimos para esses clientes com valores e taxas de juros variados.
 1.4 Aprovar empréstimos com taxas superiores a 4%.
@@ -40,7 +40,7 @@
 Etapa 2: Web Scraping
 2.1 Realizar web scraping da página https://www.saucedemo.com/
 2.2.1 Coletar todas os prudtos listadas e retornar em um arquivo CSV.
-2.3.2 Comparar o desempenho entre o uso de Selenium e Requests (opcional e diferencial).*
+2.3.2 Comparar o desempenho entre o uso de Selenium e Requests (opcional e diferencial).
 
 ### Etapa 3: Criar um app para receber os dados removido do site:
 3.1 Iniciar um novo app no django com a finalidade de guardar dados retirados da pagina saucedemo
