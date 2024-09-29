@@ -3,7 +3,7 @@
 
 ## Início Rápido
 
-1. **Dar um Fork do Repositório:**
+1. **Dar um Fork do Repositório**
 
 2. **Criar uma Nova Branch (com seu nome):**
     ```bash
