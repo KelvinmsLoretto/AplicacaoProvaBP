@@ -26,7 +26,7 @@
 
 ## Para migrar os cliente pré criado
 **Importar clientes: Após iniciar o Django, execute o comando:**
-    ```bash
+    ```python
     python manage.py importar_clientes
 
 ## Etapas da prova
