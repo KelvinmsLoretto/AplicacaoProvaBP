@@ -1,4 +1,4 @@
-# Aplicacao Prova BP
+# Aplicaçõo Prova BP
 
 
 ## Início Rápido
@@ -15,6 +15,7 @@
     ```bash
         git add .
         git commit -m "Descrição das alterações feitas"
+    
 4. **Push da Nova Branch para o Fork:**
 
     *Fazer o push da branch criada para o repositório forked:*
@@ -25,9 +26,10 @@
 
     *Após o push, o participante deve ir até o repositório original no GitHub e criar um pull request a partir da sua branch recém-criada. No pull request, eles devem descrever as alterações que fizeram e a finalidade do PR.*
 
-## Para migrar os cliente pré criado
-**Importar clientes: Após iniciar o Django, execute o comando:**
-    ```python
+## Importar Clientes
+
+1. **para importar os clientes pré cadastrados:**
+    ```bash
     python manage.py importar_clientes
 
 ## Etapas da prova
@@ -39,18 +41,18 @@
 1.4 Aprovar empréstimos com taxas superiores a 4%.<br>
 1.5 Exportar todos os dados de clientes e empréstimos para um arquivo CSV.<br>
 ### Etapa 2: Web Scraping
-2.1 Realizar web scraping da página https://www.saucedemo.com/<br>
-2.2.1 Coletar todas os prudtos listadas e retornar em um arquivo CSV.<br>
+2.1 Realizar web scraping da página [https://www.saucedemo.com/](https://www.saucedemo.com/)<br>
+2.2.1 Coletar todas os produtos listadas e retornar em um arquivo CSV.<br>
 2.3.2 Comparar o desempenho entre o uso de Selenium e Requests (opcional e diferencial).<br>
 
 ### Etapa 3: Criar um app para receber os dados removido do site:
-3.1 Iniciar um novo app no django com a finalidade de guardar dados retirados da pagina saucedemo<br>
+3.1 Iniciar um novo app no django com a finalidade de guardar dados retirados da pagina [https://www.saucedemo.com/](https://www.saucedemo.com/)<br>
 3.2 fazer a importação dos dados (mostrar script usado)<br>
 3.3 escrever testes para o app<br>
 
 ### Etapa 4: Relatório final
 *Modificar essa etapa no seu README.md trazendo os dados do desempenho selenium e requests caso tenha feito.*<br>
-Escreve quais foram as dificuldades e ponntos avistados (Obrigatório)<br>
+Escreve quais foram as dificuldades e ponntos avistados (obrigatório)<br>
 
 
 **Sinta-se à vontade para contribuir e adicionar mais funcionalidades caso necessario!**
