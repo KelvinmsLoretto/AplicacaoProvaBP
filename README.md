@@ -56,3 +56,19 @@ Escreve quais foram as dificuldades e ponntos avistados (obrigatório)<br>
 
 
 **Sinta-se à vontade para contribuir e adicionar mais funcionalidades caso necessario!**
+
+## Da Avaliação
+A prova técnica de TI será avaliada considerando dois principais critérios: qualidade do código e tempo de entrega. O participante deve equilibrar ambos os aspectos, pois a entrega rápida, por si só, não garante uma boa avaliação sem uma codificação robusta e bem estruturada.
+
+A partir de hoje, dia 04/10/2024, o participante tem até 11/10/2024 para concluir e entregar a prova. No entanto, é importante ressaltar que a velocidade da entrega impactará diretamente na avaliação final. Ou seja, embora seja necessário respeitar o prazo, entregar antes do limite pode ser um diferencial positivo, desde que a qualidade do código não seja comprometida. O objetivo é avaliar como o candidato consegue balancear esses dois fatores.
+
+Regras importantes para a entrega:
+
+Não é permitido alterar os apps Django já existentes no projeto fornecido. O participante deve apenas acrescentar as funcionalidades necessárias para cumprir os requisitos da prova.
+
+Todos os scripts utilizados durante o desenvolvimento, como automações, ferramentas de teste ou outros utilitários, devem ser mantidos no repositório para análise e futura execução.
+
+O participante deve entregar um relatório detalhado sobre o desenvolvimento, explicando as decisões tomadas, os desafios enfrentados e as soluções aplicadas. Esse relatório deverá estar presente no projeto e será parte da avaliação final.
+
+Dessa forma, espera-se que o participante demonstre sua habilidade técnica e de gestão de tempo, entregando um projeto de alta qualidade dentro do prazo estipulado.
+
