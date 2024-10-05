@@ -36,10 +36,24 @@
 
 ### Etapa 1: Manipulação de Clientes e Empréstimos
 1.1 Identificar clientes e gerar empréstimos para eles.<br>
+
+ Para gerar empréstimos, você pode usar o comando '  python apps/etapa1/criaEmprestimo.py ', executando ele no terminal na raiz do projeto ele vai gerar emprestimos para todos clientes cadastrados no banco de dados.
+
 1.2 Cadastrar 50 novos clientes (use a biblioteca Faker para gerar dados falsos).<br>
+
+ Para gerar novos cadastros, você pode usar o comando '  python criar_usuarios.py ', executando ele no terminal na raiz do projeto ele vai criar 50 novos clientes e salvar no banco de dados.
+
 1.3 Incluir novos empréstimos para esses clientes com valores e taxas de juros variados.<br>
+
+ Para gerar empréstimos, você pode usar o comando '  python apps/etapa1/criaEmprestimo.py ', executando ele no terminal na raiz do projeto ele vai gerar emprestimos para todos clientes cadastrados no banco de dados.
+
 1.4 Aprovar empréstimos com taxas superiores a 4%.<br>
+
 1.5 Exportar todos os dados de clientes e empréstimos para um arquivo CSV.<br>
+
+    Para gerar um arquivo csv, você pode usar o comando ' python apps/etapa1/exportCSV.py ', executando ele no terminal na raiz do projeto ele vai gerar um CSV para todos Clientes e outro CSV com todos emprestimos.
+
+    
 ### Etapa 2: Web Scraping
 2.1 Realizar web scraping da página [https://www.saucedemo.com/](https://www.saucedemo.com/)<br>
 2.2.1 Coletar todas os produtos listadas e retornar em um arquivo CSV.<br>
