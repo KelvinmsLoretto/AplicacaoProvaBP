@@ -53,11 +53,18 @@
 
     Para gerar um arquivo csv, você pode usar o comando ' python apps/etapa1/exportCSV.py ', executando ele no terminal na raiz do projeto ele vai gerar um CSV para todos Clientes e outro CSV com todos emprestimos.
 
-    
+
 ### Etapa 2: Web Scraping
 2.1 Realizar web scraping da página [https://www.saucedemo.com/](https://www.saucedemo.com/)<br>
+
 2.2.1 Coletar todas os produtos listadas e retornar em um arquivo CSV.<br>
+
+Para gerar um arquivo csv, você pode usar o comando ' python apps/etapa2/WebScraping.py ' para o Selenium ou ' python apps/etapa2/WebScrapingRequest.py ' para requests, executando ele no terminal na raiz do projeto ele vai gerar um CSV com todos os produtos da Saucedemo.
+
 2.3.2 Comparar o desempenho entre o uso de Selenium e Requests (opcional e diferencial).<br>
+    Tempo utilizando o Selenium: 2.3280816078186035 segundos
+    Tempo utilizando o 0.14171719551086426 segundos
+
 
 ### Etapa 3: Criar um app para receber os dados removido do site:
 3.1 Iniciar um novo app no django com a finalidade de guardar dados retirados da pagina [https://www.saucedemo.com/](https://www.saucedemo.com/)<br>
