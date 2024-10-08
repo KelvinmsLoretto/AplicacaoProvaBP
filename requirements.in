@@ -1,0 +1,17 @@
+Django==5.1.1
+djangorestframework==3.15.2
+drf-yasg==1.21.7
+beautifulsoup4==4.12.3
+selenium==4.25.0
+requests==2.32.3
+requests-html==0.10.0
+pyppeteer==2.0.0
+cryptography==43.0.1
+PyYAML==6.0.2
+fake-useragent==1.5.1
+asgiref==3.8.1
+pytz==2024.2
+sqlparse==0.5.1
+tzdata==2024.2
+uritemplate==4.1.1
+Faker==30.3.0
