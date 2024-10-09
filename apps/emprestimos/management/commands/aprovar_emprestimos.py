@@ -6,6 +6,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         try:
+            # Fetching all loans
             emprestimos_response = requests.get(f'{self.BASE_URL}/emprestimos/')
             emprestimos_response.raise_for_status()
             emprestimos = emprestimos_response.json()
@@ -15,6 +16,7 @@ class Command(BaseCommand):
                     emprestimo_id = emprestimo['id']
                     emprestimo['aprovado'] = True
 
+                    # Updating the loan approval status
                     update_response = requests.put(f'{self.BASE_URL}/emprestimos/{emprestimo_id}/', json=emprestimo)
                     update_response.raise_for_status()
 
