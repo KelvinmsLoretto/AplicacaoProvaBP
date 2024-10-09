@@ -4,7 +4,7 @@ import time
 import json
 import re
 
-def fetch_product_data():
+def export_data():
     login_url = 'https://www.saucedemo.com/'
     inventory_url = 'https://www.saucedemo.com/static/js/main.018d2d1e.chunk.js'
     login_payload = {
@@ -51,4 +51,4 @@ def fetch_product_data():
             print("Nenhum conteúdo encontrado na resposta.")
 
 if __name__ == "__main__":
-    fetch_product_data()
+    export_data()
