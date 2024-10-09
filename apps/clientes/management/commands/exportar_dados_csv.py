@@ -8,7 +8,7 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument(
             '--arquivo', type=str, default='clientes_emprestimos.csv'
-        )#GERAR O CSV COM NOME CORRETO
+        )
 
     def handle(self, *args, **kwargs):
         arquivo_csv = kwargs['arquivo']
@@ -19,7 +19,7 @@ class Command(BaseCommand):
                 'Nome do Cliente', 'CPF', 'Benefício', 'Email', 'Estado Civil', 'Sexo',
                 'Valor Solicitado', 'Taxa de Juros', 'Número de Parcelas', 'Valor Total', 
                 'Valor da Parcela', 'Aprovado'
-            ])#PRO<EORA LINHA
+            ])
 
             clientes = Cliente.objects.all()
 
