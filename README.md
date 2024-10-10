@@ -37,11 +37,11 @@
 ### Etapa 1: Manipulação de Clientes e Empréstimos
 1.1 Identificar clientes e gerar empréstimos para eles.<br>
 
- Para gerar empréstimos, você pode usar o comando '  python criaEmprestimo.py ', executando ele no terminal na raiz do projeto ele vai gerar emprestimos para todos clientes cadastrados no banco de dados.
+ Para gerar empréstimos, você pode usar o comando '  python cria_aprova_emprestimos.py ', executando ele no terminal na raiz do projeto ele vai consultar, gerar e aprovar emprestimos conforme sua escolha para todos clientes cadastrados no banco de dados.
 
 1.2 Cadastrar 50 novos clientes (use a biblioteca Faker para gerar dados falsos).<br>
 
- Para gerar novos cadastros, você pode usar o comando '  python criar_usuarios.py ', executando ele no terminal na raiz do projeto ele vai criar  novos clientes e salvar no banco de dados conforme você preferir.
+ Para gerar novos cadastros, você pode usar o comando '  python criar_usuarios.py ', executando ele no terminal na raiz do projeto ele vai criar  novos clientes e salvar no banco de dados conforme você escolher.
 
 1.3 Incluir novos empréstimos para esses clientes com valores e taxas de juros variados.<br>
 
@@ -49,7 +49,7 @@
 
 1.4 Aprovar empréstimos com taxas superiores a 4%.<br>
     
-    Fiz dinamicamente no script 1.3
+ Para gerar empréstimos, você pode usar o comando '  python cria_aprova_emprestimos.py ', executando ele no terminal na raiz do projeto ele vai consultar, gerar e aprovar emprestimos conforme sua escolha para todos clientes cadastrados no banco de dados.
 
 1.5 Exportar todos os dados de clientes e empréstimos para um arquivo CSV.<br>
 
