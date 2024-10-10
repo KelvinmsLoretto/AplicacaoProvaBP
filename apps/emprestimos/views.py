@@ -80,7 +80,7 @@ class EmprestimoViewSet(viewsets.ViewSet):
         request_body=SimularEmprestimoSerializer,
         responses={200: openapi.Response('Simulação realizada com sucesso', SimularEmprestimoSerializer)}
     )
-    def criar_emprestimo(self, request, pk=None):
+    def criar_emprestimo(self, request, pk:str=None):
         cliente = Cliente.objects.get(pk=pk)
         serializer = EmprestimoSerializer(data=request.data, context={'cliente': cliente})
 
@@ -99,5 +99,4 @@ class EmprestimoViewSet(viewsets.ViewSet):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
 

@@ -41,6 +41,7 @@ urlpatterns = [
     path('api/v1/', include([
         path('cliente/', include('apps.clientes.urls')),
         path('emprestimos/', include('apps.emprestimos.urls')),
+        path('produtos/', include('apps.produtos.urls')),
         
         # URLs para a documentação Swagger e ReDoc
         re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),
