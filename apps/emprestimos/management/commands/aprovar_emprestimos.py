@@ -6,21 +6,20 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         try:
-            # Fetching all loans
-            emprestimos_response = requests.get(f'{self.BASE_URL}/emprestimos/')
-            emprestimos_response.raise_for_status()
-            emprestimos = emprestimos_response.json()
+            clientes_response = requests.get(f'{self.BASE_URL}/cliente/clientes/')
+            clientes_response.raise_for_status()
+            clientes = clientes_response.json()
 
-            for emprestimo in emprestimos:
-                if emprestimo['taxa_juros'] > 4 and not emprestimo['aprovado']:
-                    emprestimo_id = emprestimo['id']
-                    emprestimo['aprovado'] = True
+            for cliente in clientes:
+                emprestimos_response = requests.get(f'{self.BASE_URL}/emprestimos/clientes/{cliente['cpf']}/emprestimos')
+                emprestimos_response.raise_for_status()
+                emprestimos = emprestimos_response.json()
 
-                    # Updating the loan approval status
-                    update_response = requests.put(f'{self.BASE_URL}/emprestimos/{emprestimo_id}/', json=emprestimo)
-                    update_response.raise_for_status()
-
-                    self.stdout.write(self.style.SUCCESS(f'Empréstimo {emprestimo_id} aprovado.'))
+                for emprestimo in emprestimos:
+                    if float(emprestimo['taxa_juros']) >= 4.00 and not emprestimo['aprovado']:
+                        update_response = requests.get(f'{self.BASE_URL}/emprestimos/{emprestimo['id']}/aprovar', json=emprestimo)
+                        update_response.raise_for_status()
+                        self.stdout.write(self.style.SUCCESS(f'Empréstimo {emprestimo['id']} aprovado.'))
 
         except requests.RequestException as e:
             self.stdout.write(self.style.ERROR(f'Erro ao processar empréstimos: {e}'))
