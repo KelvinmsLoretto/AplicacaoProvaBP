@@ -5,7 +5,8 @@ from rest_framework import viewsets, status
 from rest_framework.response import Response
 from apps.produtos.models import Produto
 from apps.produtos.serializers import ProdutosSerializer
-
+import csv
+from django.http import HttpResponse
 
 class ProdutoViewSet(viewsets.ModelViewSet):
     queryset = Produto.objects.all()
@@ -82,3 +83,16 @@ class ProdutoViewSet(viewsets.ModelViewSet):
                     Produto.objects.create(**data)
 
             return Response(status=status.HTTP_201_CREATED)
+        
+    def export_produtos_csv(self, request):
+
+        response = HttpResponse(content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename="produtos.csv"'
+
+        writer = csv.writer(response)
+        writer.writerow(['ID', 'Nome', 'Descrição', 'Preço'])
+
+        produtos = Produto.objects.all()
+        for produto in produtos:
+            writer.writerow([produto.id, produto.nome, produto.descricao, produto.preco])
+        return response
