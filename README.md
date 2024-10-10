@@ -80,6 +80,7 @@ As rotas para gerenciamento de produtos estão disponíveis via `apps.produtos.v
 | Atualizar um produto      | PUT    | `http://127.0.0.1:8080/api/v1/produtos/produto/update/<id>` |
 | Deletar um produto        | DELETE | `http://127.0.0.1:8080/api/v1/produtos/produto/delete/<id>` |
 | Importar produtos de Saucedemo | POST | `http://127.0.0.1:8080/api/v1/produtos/produtos/importar` |
+| export todos produtos para um csv | POST | `http://127.0.0.1:8080/api/v1produtos/exportar-produtos-csv/` |
 
 Essas funcionalidades foram implementadas para melhorar o fluxo de desenvolvimento e permitir uma maior flexibilidade na manipulação dos dados.
 `{
