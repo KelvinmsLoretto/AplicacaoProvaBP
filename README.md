@@ -59,7 +59,7 @@ Além disso, houve um problema nos endpoints de criação e simulação de empr�
 
 1. **Iniciar o servidor**: `python manage.py runserver 8080`
 2. **Gerar empréstimos com valores aleatórios**: `python manage.py gerar_emprestimos`
-3. **Gerar empréstimos prontos para aprovação**: `python manage.py gerar_emprestimos`
+3. **Gerar empréstimos prontos para aprovação**: `python manage.py gerar_somente_emprestimos_validos`
 4. **Criar novos clientes**: `python manage.py criar_clientes`
 5. **Aprovar empréstimos com juros acima de 4%**: `python manage.py aprovar_emprestimos`
 6. **Exportar dados para CSV**: `python manage.py exportar_dados_csv`
