@@ -50,5 +50,4 @@ class ProdutoViewSetTest(TestCase):
     def test_importar_dados_do_site(self):
         response = self.client.request('/api/v1/produtos/produtos/importar')
         self.assertEqual(response.status_code, status.HTTP_201_CREATED )
-        # Assuming the imported data has at least one product
         self.assertGreater(Produto.objects.count(), 0)
