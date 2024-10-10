@@ -1,74 +1,47 @@
-# Aplicaçõo Prova BP
 
+## Relatório do Projeto
 
-## Início Rápido
+## Credenciais de acesso ao app
 
-1. **Dar um Fork do Repositório**
+- login: standart_user
+- senha: secret_sauce
 
-2. **Criar uma Nova Branch (com seu nome):**
-    ```bash
-    git checkout -b nome-do-participante
+Este projeto tem como objetivo simular a geração de clientes e empréstimos, além de realizar scraping de produtos e seus respectivos preços. Foi desenvolvido utilizando o framework Django e integra todas as operações em um ambiente web acessível. Cada etapa do desenvolvimento envolveu desafios únicos, como a integração com banco de dados, web scraping e a adaptação ao Django, visto que o framework era uma novidade no início do projeto.
 
-3. **Fazer as Alterações e Commit:**
+## Tecnologias Utilizadas
 
-    *Realizar as modificações necessárias, e depois fazer commit das alterações:*
-    ```bash
-        git add .
-        git commit -m "Descrição das alterações feitas"
-    
-4. **Push da Nova Branch para o Fork:**
+- **Python**: Linguagem principal utilizada para a implementação.
+- **Django**: Framework web utilizado para gerenciar o back-end da aplicação.
+- **Selenium**: Utilizado para realizar o web scraping.
+- **Faker**: Biblioteca utilizada para a geração de dados fictícios.
+- **CSV**: Formato utilizado para o salvamento de dados temporários durante as primeiras iterações.
 
-    *Fazer o push da branch criada para o repositório forked:*
-    ```bash
-    git push origin nome-do-participante
+## Funcionalidades Implementadas
 
-5. **Criar um Pull Request:**
+1. **Geração de Clientes**:
+   - Utiliza a biblioteca `Faker` para gerar dados fictícios.
+   - Dados salvos no banco de dados do Django, com campos customizados nos `models.py`.
 
-    *Após o push, o participante deve ir até o repositório original no GitHub e criar um pull request a partir da sua branch recém-criada. No pull request, eles devem descrever as alterações que fizeram e a finalidade do PR.*
+2. **Simulação de Empréstimos**:
+   - Criação de empréstimos fictícios com base em regras de aprovação.
+   - Aplicação de taxas de juros superiores a 4% para empréstimos aprovados.
 
-## Importar Clientes
+3. **Web Scraping de Produtos**:
+   - O scraping coleta informações de produtos e preços, utilizando `Selenium`.
+   - Os dados são integrados ao banco de dados para posterior visualização no app.
 
-1. **para importar os clientes pré cadastrados:**
-    ```bash
-    python manage.py importar_clientes
+4. **Administração via Django Admin**:
+   - Interface de administração gerada automaticamente para gerenciar clientes e empréstimos.
+   - Visualização e manipulação de dados de forma facilitada via Django Admin.
 
-## Etapas da prova
+## Principais Desafios
 
-### Etapa 1: Manipulação de Clientes e Empréstimos
-1.1 Identificar clientes e gerar empréstimos para eles.<br>
-1.2 Cadastrar 50 novos clientes (use a biblioteca Faker para gerar dados falsos).<br>
-1.3 Incluir novos empréstimos para esses clientes com valores e taxas de juros variados.<br>
-1.4 Aprovar empréstimos com taxas superiores a 4%.<br>
-1.5 Exportar todos os dados de clientes e empréstimos para um arquivo CSV.<br>
-### Etapa 2: Web Scraping
-2.1 Realizar web scraping da página [https://www.saucedemo.com/](https://www.saucedemo.com/)<br>
-2.2.1 Coletar todas os produtos listadas e retornar em um arquivo CSV.<br>
-2.3.2 Comparar o desempenho entre o uso de Selenium e Requests (opcional e diferencial).<br>
+- **Familiarização com o Django**: Inicialmente, foi necessário estudar as funcionalidades e realizar configurações no `Visual Studio Code` para integrar o Python e o framework de maneira adequada.
+- **Geração de Dados**: Houve dificuldades com a instalação e uso da biblioteca `Faker`, pois não havia familiaridade com o `pip`.
+- **Web Scraping**: A implementação de scraping foi a parte mais desafiadora, exigindo extensas pesquisas e tentativas para configurar o `Selenium`.
+- **Erro 404 no Navegador**: Um dos principais erros enfrentados foi ao tentar acessar o app, o que estava relacionado à falta de integração adequada entre os dados CSV e o banco de dados do Django.
+- **Refatoração do Código**: A refatoração do código de geração de clientes e empréstimos para adequá-lo às estruturas do Django foi crucial para a integração correta com o banco de dados.
 
-### Etapa 3: Criar um app para receber os dados removido do site:
-3.1 Iniciar um novo app no django com a finalidade de guardar dados retirados da pagina [https://www.saucedemo.com/](https://www.saucedemo.com/)<br>
-3.2 fazer a importação dos dados (mostrar script usado)<br>
-3.3 escrever testes para o app<br>
+## Conclusão
 
-### Etapa 4: Relatório final
-*Modificar essa etapa no seu README.md trazendo os dados do desempenho selenium e requests caso tenha feito.*<br>
-Escreve quais foram as dificuldades e ponntos avistados (obrigatório)<br>
-
-
-**Sinta-se à vontade para contribuir e adicionar mais funcionalidades caso necessario!**
-
-## Da Avaliação
-A prova técnica de TI será avaliada considerando dois principais critérios: qualidade do código e tempo de entrega. O participante deve equilibrar ambos os aspectos, pois a entrega rápida, por si só, não garante uma boa avaliação sem uma codificação robusta e bem estruturada.
-
-A partir de hoje, dia 04/10/2024, o participante tem até 11/10/2024 para concluir e entregar a prova. No entanto, é importante ressaltar que a velocidade da entrega impactará diretamente na avaliação final. Ou seja, embora seja necessário respeitar o prazo, entregar antes do limite pode ser um diferencial positivo, desde que a qualidade do código não seja comprometida. O objetivo é avaliar como o candidato consegue balancear esses dois fatores.
-
-Regras importantes para a entrega:
-
-Não é permitido alterar os apps Django já existentes no projeto fornecido. O participante deve apenas acrescentar as funcionalidades necessárias para cumprir os requisitos da prova.
-
-Todos os scripts utilizados durante o desenvolvimento, como automações, ferramentas de teste ou outros utilitários, devem ser mantidos no repositório para análise e futura execução.
-
-O participante deve entregar um relatório detalhado sobre o desenvolvimento, explicando as decisões tomadas, os desafios enfrentados e as soluções aplicadas. Esse relatório deverá estar presente no projeto e será parte da avaliação final.
-
-Dessa forma, espera-se que o participante demonstre sua habilidade técnica e de gestão de tempo, entregando um projeto de alta qualidade dentro do prazo estipulado.
-
+O desenvolvimento deste projeto foi uma experiência intensa de aprendizado, tanto em termos de novas ferramentas quanto em relação à resolução de problemas em tempo real. Cada desafio encontrado proporcionou novas habilidades e a capacidade de pensar de maneira crítica sobre cada etapa do desenvolvimento.
