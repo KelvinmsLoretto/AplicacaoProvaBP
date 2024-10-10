@@ -1,0 +1,8 @@
+cpf,nome,email,beneficio,estado_civil,sexo,nome_mae,nome_pai,emprestimo_id,valor_solicitado,taxa_juros,num_parcelas,valor_total,valor_parcela
+93426187078,Sofia Pastor,vfreitas@example.net,7939658173,S,F,Calebe Costa,Julia Nogueira,443bce52-92e4-4c80-beb6-507bf73064d4,952.00,5.00,6,1275.77,212.63
+98521073640,Alexandre Silva,luan44@example.com,6483857298,C,F,João Pedro Albuquerque,Ana Lívia Fogaça,20311f74-94fd-4416-9d72-050158c60f55,21.00,5.00,6,28.14,4.69
+60958724300,Heloisa Lima,barbara37@example.com,7664730389,S,F,Diogo da Paz,Ayla Monteiro,7e052cd2-0004-4f12-965d-3ea40538622d,743.00,4.00,6,940.13,156.69
+68759321482,Daniela Nogueira,maria-sophiasampaio@example.org,4936323592,S,F,Thales Pacheco,Luna Novaes,b8a05852-71d8-486b-86cc-ce372194de22,893.00,6.00,5,1195.04,239.01
+51396720499,Srta. Carolina Teixeira,camargobreno@example.org,1248347367,S,M,Srta. Mariah Castro,Sr. Luiz Otávio Cardoso,7891874e-cb16-4dd2-bb91-c5183961bb17,71.00,4.00,5,86.38,17.28
+23749856010,Erick Azevedo,da-luzalicia@example.org,2679458692,V,F,Matteo Nogueira,Emanuella Pires,7255bfc0-e215-4f97-90ef-7089ddf18cd8,237.00,5.00,5,302.48,60.50
+74135980279,Benjamim Albuquerque,dduarte@example.org,1134723087,S,M,Dra. Maria Liz Ferreira,Dr. Davi Luiz Oliveira,442e3a01-41d2-4f16-acb4-f21adaf89bde,554.00,6.00,4,699.41,174.85

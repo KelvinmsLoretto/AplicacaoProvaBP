@@ -2,20 +2,27 @@ import os
 import random
 from faker import Faker
 import django
+import sys
 
 print("Iniciando o script...")
 
-# Configura o ambiente Django
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ApiBancaria.settings")  
+# Configura o ambiente Django dinamicamente
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ApiBancaria.settings")
+
+# Adiciona o diretório raiz do projeto ao sys.path
+project_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(project_path)
+
 django.setup()
 
+# Importar os modelos após configurar o Django
 from apps.clientes.models import Cliente, DadosPessoais, ContaBancaria
 
 # Inicializa o Faker
 fake = Faker('pt_BR')
 
-def gerar_usuarios():
-    for _ in range(50):
+def gerar_usuarios(numeroCadastros):
+    for _ in range(numeroCadastros):
         nome = fake.name()
         cpf = fake.cpf().replace('.', '').replace('-', '')
         beneficio = fake.random_number(digits=10, fix_len=True)
@@ -64,7 +71,8 @@ def gerar_usuarios():
             dv_agencia=dv_agencia
         )
 
-    print("50 usuários criados com sucesso!")
+    print("Usuários criados com sucesso!")
 
 if __name__ == "__main__":
-    gerar_usuarios()
+    numeroCadastros = int(input('Quantos cadastros você deseja criar? '))
+    gerar_usuarios(numeroCadastros)
