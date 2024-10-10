@@ -59,7 +59,7 @@ Além disso, houve um problema nos endpoints de criação e simulação de empr�
 
 1. **Iniciar o servidor**: `python manage.py runserver 8080`
 2. **Gerar empréstimos com valores aleatórios**: `python manage.py gerar_emprestimos`
-3. **Gerar empréstimos prontos para aprovação**: `python manage.py gerar_emprestimos`
+3. **Gerar empréstimos prontos para aprovação**: `python manage.py gerar_somente_emprestimos_validos`
 4. **Criar novos clientes**: `python manage.py criar_clientes`
 5. **Aprovar empréstimos com juros acima de 4%**: `python manage.py aprovar_emprestimos`
 6. **Exportar dados para CSV**: `python manage.py exportar_dados_csv`
@@ -79,7 +79,8 @@ As rotas para gerenciamento de produtos estão disponíveis via `apps.produtos.v
 | Criar um produto          | POST   | `http://127.0.0.1:8080/api/v1/produtos/produto/create` |
 | Atualizar um produto      | PUT    | `http://127.0.0.1:8080/api/v1/produtos/produto/update/<id>` |
 | Deletar um produto        | DELETE | `http://127.0.0.1:8080/api/v1/produtos/produto/delete/<id>` |
-| Importar produtos de Saucedemo | POST | `http://127.0.0.1:8080/api/v1/produtos/produtos/importar` |
+| Importar produtos de Saucedemo | GET | `http://127.0.0.1:8080/api/v1/produtos/produtos/importar` |
+| export todos produtos para um csv | GET | `http://127.0.0.1:8080/api/v1produtos/exportar-produtos-csv/` |
 
 Essas funcionalidades foram implementadas para melhorar o fluxo de desenvolvimento e permitir uma maior flexibilidade na manipulação dos dados.
 `{
