@@ -50,9 +50,9 @@ Além disso, houve um problema nos endpoints de criação e simulação de empr�
 ## Guia de Execução dos Comandos
 
 ### 0. Configuração Inicial
-
 1. **Zerar a base de dados**: `rm .\db.sqlite3`
-2. **Aplicar migrações**: `python manage.py migrate`
+2.1. **Zerar a base de dados**: `python manage.py makemigrations clientes/emprestimos/produtos`
+2.2. **Aplicar migrações**: `python manage.py migrate`
 3. **Importar clientes padrão**: `python manage.py importar_clientes`
 
 ### 1. Gerenciamento de Clientes e Empréstimos
