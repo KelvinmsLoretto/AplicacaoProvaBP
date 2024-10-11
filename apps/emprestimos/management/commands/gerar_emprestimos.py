@@ -35,7 +35,7 @@ class Command(BaseCommand):
 
                     self.calcular_valor_total(emprestimo_data)
 
-                    if 1 <= emprestimo_data['valor_total'] <= 10000 and 3.14 < taxa_juros < 6.6 and num_parcelas > 0:
+                    if 1 <= emprestimo_data['valor_total'] <= 10000 and 3.14 < taxa_juros < 6 and num_parcelas > 0:
                         try:
                             emprestimo_response = requests.post(f'{self.BASE_URL}/emprestimos/clientes/{str(cliente["cpf"])}/emprestimos/criar/', json=emprestimo_data)
                             emprestimo_response.raise_for_status()
@@ -44,8 +44,8 @@ class Command(BaseCommand):
                             self.stdout.write(self.style.ERROR(f'Erro ao processar empréstimos: {e}'))
 
                     else:
-                        self.stdout.write(f"Inputs incorretos para {cliente['nome']}\n\nValor total deve ser no máximo 10000, ter pelo menos 1 parcela e uma taxa entre 3.14 e 6.5% \n")
-                        self.stdout.write(f"Dados do empréstimo fracassado: {emprestimo_data}\n")
+                        self.stdout.write(self.style.ERROR(f"Inputs incorretos para {cliente['nome']}\n\nValor total deve ser no máximo 10000R$, ter pelo menos 1 parcela e uma taxa entre 3.14 e 6.5% \n"))
+                        self.stdout.write(self.style.WARNING(f"Dados do empréstimo fracassado: {emprestimo_data}\n"))
 
         except requests.RequestException as e:
             self.stdout.write(self.style.ERROR(f'Erro ao processar empréstimos: {e}'))
