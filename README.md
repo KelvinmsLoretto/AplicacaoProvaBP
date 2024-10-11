@@ -1,74 +1,97 @@
-# Aplicaçõo Prova BP
+## Etapa 1 - Clientes e Empréstimos
 
+Veja o guia resumido de comandos no final deste pull request.
 
-## Início Rápido
+- **Cadastro de Clientes**: Implementação de um comando utilizando a biblioteca Faker para gerar dados fictícios de clientes, facilitando o desenvolvimento e os testes.
+- **Aprovação Automática de Empréstimos**: Empréstimos com taxas de juros superiores a 4% são aprovados automaticamente.
+- **Exportação de Dados**: Implementação de funcionalidades para exportar dados de clientes e empréstimos para arquivos CSV, permitindo análises externas.
 
-1. **Dar um Fork do Repositório**
+Para executar os comandos, use: `python manage.py nome_do_comando`
 
-2. **Criar uma Nova Branch (com seu nome):**
-    ```bash
-    git checkout -b nome-do-participante
+---
 
-3. **Fazer as Alterações e Commit:**
+## Etapa 2 - Extração de Dados com Requests e Selenium
 
-    *Realizar as modificações necessárias, e depois fazer commit das alterações:*
-    ```bash
-        git add .
-        git commit -m "Descrição das alterações feitas"
-    
-4. **Push da Nova Branch para o Fork:**
+Nesta etapa, foram criados dois scripts para extração de dados com abordagens diferentes:
 
-    *Fazer o push da branch criada para o repositório forked:*
-    ```bash
-    git push origin nome-do-participante
+- **Selenium**: Utilizado para uma extração mais "amigável", permitindo visualizar o processo. Embora seja mais lento, o Selenium é vantajoso para páginas com carregamento dinâmico.
+- **Requests**: Mais performático, porém menos flexível. Ideal para extração direta de dados sem necessidade de interação visual.
 
-5. **Criar um Pull Request:**
+### Resultados de Performance
 
-    *Após o push, o participante deve ir até o repositório original no GitHub e criar um pull request a partir da sua branch recém-criada. No pull request, eles devem descrever as alterações que fizeram e a finalidade do PR.*
+| Método        | Tempo (dentro do projeto) | Tempo (fora do projeto) |
+|---------------|---------------------------|--------------------------|
+| Selenium      | 3.16 segundos             | 1.7 segundos             |
+| Requests      | 0.81 segundos             | 0.30 segundos            |
 
-## Importar Clientes
+Para executar os scripts, use: `python nome_do_arquivo.py`
 
-1. **para importar os clientes pré cadastrados:**
-    ```bash
-    python manage.py importar_clientes
+---
 
-## Etapas da prova
+## Etapa 3 - Desenvolvimento de Nova Rota para Produtos, Importação de Dados e Testes Unitários
 
-### Etapa 1: Manipulação de Clientes e Empréstimos
-1.1 Identificar clientes e gerar empréstimos para eles.<br>
-1.2 Cadastrar 50 novos clientes (use a biblioteca Faker para gerar dados falsos).<br>
-1.3 Incluir novos empréstimos para esses clientes com valores e taxas de juros variados.<br>
-1.4 Aprovar empréstimos com taxas superiores a 4%.<br>
-1.5 Exportar todos os dados de clientes e empréstimos para um arquivo CSV.<br>
-### Etapa 2: Web Scraping
-2.1 Realizar web scraping da página [https://www.saucedemo.com/](https://www.saucedemo.com/)<br>
-2.2.1 Coletar todas os produtos listadas e retornar em um arquivo CSV.<br>
-2.3.2 Comparar o desempenho entre o uso de Selenium e Requests (opcional e diferencial).<br>
+- **CRUD para Produtos**: Desenvolvimento de um CRUD padrão para gerenciar registros de produtos.
+- **Importação de Dados**: Criação de uma rota para importar dados diretamente do site para o banco de dados, utilizando o script desenvolvido na etapa anterior.
+- **Testes Unitários**: Implementação de testes para garantir a integridade e funcionalidade do CRUD de produtos.
 
-### Etapa 3: Criar um app para receber os dados removido do site:
-3.1 Iniciar um novo app no django com a finalidade de guardar dados retirados da pagina [https://www.saucedemo.com/](https://www.saucedemo.com/)<br>
-3.2 fazer a importação dos dados (mostrar script usado)<br>
-3.3 escrever testes para o app<br>
+Para rodar o servidor, utilize: `python manage.py runserver 8080` e acesse o Swagger para documentação das APIs.
 
-### Etapa 4: Relatório final
-*Modificar essa etapa no seu README.md trazendo os dados do desempenho selenium e requests caso tenha feito.*<br>
-Escreve quais foram as dificuldades e ponntos avistados (obrigatório)<br>
+---
 
+## Dificuldades
 
-**Sinta-se à vontade para contribuir e adicionar mais funcionalidades caso necessario!**
+O principal desafio durante o desenvolvimento foi a extração de dados via Requests na segunda etapa, devido à natureza dinâmica do HTML utilizado. Foi necessário explorar diferentes abordagens para capturar os valores corretamente.
 
-## Da Avaliação
-A prova técnica de TI será avaliada considerando dois principais critérios: qualidade do código e tempo de entrega. O participante deve equilibrar ambos os aspectos, pois a entrega rápida, por si só, não garante uma boa avaliação sem uma codificação robusta e bem estruturada.
+Além disso, houve um problema nos endpoints de criação e simulação de empréstimos em que CPFs iniciados em "0" eram tratados como inteiros, o que causava erros. A solução foi ajustar o tipo dos parâmetros no request.
 
-A partir de hoje, dia 04/10/2024, o participante tem até 11/10/2024 para concluir e entregar a prova. No entanto, é importante ressaltar que a velocidade da entrega impactará diretamente na avaliação final. Ou seja, embora seja necessário respeitar o prazo, entregar antes do limite pode ser um diferencial positivo, desde que a qualidade do código não seja comprometida. O objetivo é avaliar como o candidato consegue balancear esses dois fatores.
+---
 
-Regras importantes para a entrega:
+## Guia de Execução dos Comandos
 
-Não é permitido alterar os apps Django já existentes no projeto fornecido. O participante deve apenas acrescentar as funcionalidades necessárias para cumprir os requisitos da prova.
+### 0. Configuração Inicial
 
-Todos os scripts utilizados durante o desenvolvimento, como automações, ferramentas de teste ou outros utilitários, devem ser mantidos no repositório para análise e futura execução.
+1. **Zerar a base de dados**: `rm .\db.sqlite3`
+2. **Zerar a base de dados**: `python manage.py makemigrations clientes/emprestimos/produtos`
+3. **Aplicar migrações**: `python manage.py migrate`
+4. **Importar clientes padrão**: `python manage.py importar_clientes`
 
-O participante deve entregar um relatório detalhado sobre o desenvolvimento, explicando as decisões tomadas, os desafios enfrentados e as soluções aplicadas. Esse relatório deverá estar presente no projeto e será parte da avaliação final.
+### 1. Gerenciamento de Clientes e Empréstimos
 
-Dessa forma, espera-se que o participante demonstre sua habilidade técnica e de gestão de tempo, entregando um projeto de alta qualidade dentro do prazo estipulado.
+1. **Iniciar o servidor**: `python manage.py runserver 8080`
+2. **Gerar empréstimos com valores aleatórios**: `python manage.py gerar_emprestimos`
+3. **Gerar empréstimos prontos para aprovação**: `python manage.py gerar_somente_emprestimos_validos`
+4. **Criar novos clientes**: `python manage.py criar_clientes`
+5. **Aprovar empréstimos com juros acima de 4%**: `python manage.py aprovar_emprestimos`
+6. **Exportar dados para CSV**: `python manage.py exportar_dados_csv`
 
+### 2. Extração de Dados
+
+1. **Extrair dados com Requests**: `python manage.py export_data_request`
+2. **Extrair dados com Selenium**: `python manage.py export_data_selenium`
+
+### 3. Rotas Disponíveis e Templates JSON
+
+As rotas para gerenciamento de produtos estão disponíveis via `apps.produtos.views.ProdutoViewSet`.
+
+| Ação                      | Método | URL                                           |
+|---------------------------|--------|-----------------------------------------------|
+| Buscar todos os produtos   | GET    | `http://127.0.0.1:8080/api/v1/produtos/produtos` |
+| Criar um produto           | POST   | `http://127.0.0.1:8080/api/v1/produtos/produto/create` |
+| Atualizar um produto       | PUT    | `http://127.0.0.1:8080/api/v1/produtos/produto/update/<id>` |
+| Deletar um produto         | DELETE | `http://127.0.0.1:8080/api/v1/produtos/produto/delete/<id>` |
+| Importar produtos de Saucedemo | GET | `http://127.0.0.1:8080/api/v1/produtos/produtos/importar` |
+| Exportar todos os produtos para um CSV | GET | `http://127.0.0.1:8080/api/v1/produtos/exportar-produtos-csv/` |
+
+Essas funcionalidades foram implementadas para melhorar o fluxo de desenvolvimento e permitir uma maior flexibilidade na manipulação dos dados.
+
+```json
+{
+  "nome": "string",
+  "descricao": "string",
+  "preco": "string"
+}
+```
+JSON template para produtos
+
+### Observação:
+Os arquivos CSV de exportação gerados possuem a mesma estrutura, podendo variar apenas na ordem das colunas.

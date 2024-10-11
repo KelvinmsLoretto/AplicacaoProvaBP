@@ -1,0 +1,61 @@
+Nome do Cliente,CPF,Benefício,Email,Estado Civil,Sexo,Valor Solicitado,Taxa de Juros,Número de Parcelas,Valor Total,Valor da Parcela,Aprovado
+João Silva,12345678900,1234567890,joaosilva@gmail.com,Solteiro,Masculino,5000.00,4.00,2,5408.00,2704.00,Sim
+Ana Souza,98765432100,1234567891,anasouza@gmail.com,Casada,Feminino,5000.00,4.00,2,5408.00,2704.00,Sim
+Pedro Oliveira,12312312345,1234567892,pedrooliveira@gmail.com,Divorciado,Masculino,5000.00,4.00,2,5408.00,2704.00,Sim
+Mariana Lima,11122233344,1234567893,marianalima@gmail.com,Solteira,Feminino,2312.38,3.83,7,3008.29,429.76,Não
+Lucas Ferreira,22233344455,1234567894,lucasferreira@gmail.com,Casado,Masculino,2733.61,3.42,4,3127.19,781.80,Não
+Fernanda Martins,33344455566,1234567895,fernandamartins@gmail.com,Solteira,Feminino,5000.00,4.00,2,5408.00,2704.00,Sim
+Rafael Costa,44455566677,1234567896,rafaelcosta@gmail.com,Casado,Masculino,8560.06,5.15,1,9000.90,9000.90,Sim
+Giovanna Almeida,55566677788,1234567897,giovannaalmeida@gmail.com,Divorciada,Feminino,3316.56,5.62,9,5425.04,602.78,Sim
+Thiago Rocha,66677788899,1234567898,thiagorocha@gmail.com,Solteiro,Masculino,5000.00,4.00,2,5408.00,2704.00,Sim
+Camila Pires,77788899900,1234567899,camilapires@gmail.com,Casada,Feminino,131.65,3.50,8,173.36,21.67,Não
+Jade Montenegro,07928641585,4923211272,pietracaldeira@example.net,D,M,5000.00,4.00,2,5408.00,2704.00,Sim
+Beatriz Gonçalves,49821537600,5560010494,emillymoura@example.net,C,M,5000.00,4.00,2,5408.00,2704.00,Sim
+Srta. Emanuelly Cavalcanti,10289374588,386696539,vcirino@example.net,C,F,3963.74,4.43,12,6668.20,555.68,Sim
+Valentina Silva,27348506992,6995647807,ana-julia42@example.org,S,F,2848.68,3.72,11,4257.27,387.02,Não
+Ana Carolina Pires,54317960893,9020081135,imendonca@example.net,S,F,5000.00,4.00,2,5408.00,2704.00,Sim
+João Santos,29574013634,1206827834,fbarros@example.net,V,F,3254.91,3.62,8,4326.01,540.75,Não
+Ian Jesus,31642809713,9340158546,luisaazevedo@example.net,C,F,5000.00,4.00,2,5408.00,2704.00,Sim
+Emanuelly Dias,89234716078,5445598719,cbarbosa@example.org,S,M,5000.00,4.00,2,5408.00,2704.00,Sim
+Ana Beatriz Fernandes,74058639229,4967409228,gcavalcante@example.net,V,F,5000.00,4.00,2,5408.00,2704.00,Sim
+Sofia Mendonça,49108237603,2990361288,xcardoso@example.org,D,F,5000.00,4.00,2,5408.00,2704.00,Sim
+Dr. Mathias Mendonça,25901746830,666591820,ramosisis@example.org,D,F,5000.00,4.00,2,5408.00,2704.00,Sim
+Ana Lívia Machado,53419207832,8622440874,zsousa@example.net,C,M,5000.00,4.00,2,5408.00,2704.00,Sim
+Calebe Almeida,61904325734,3720883372,ana-lauracamara@example.net,S,F,5000.00,4.00,2,5408.00,2704.00,Sim
+Isabella Melo,96348720187,269734952,evelyn40@example.net,S,F,5000.00,4.00,2,5408.00,2704.00,Sim
+Liz Vasconcelos,84063517217,1153324302,qda-luz@example.com,S,M,5318.40,5.14,6,7184.37,1197.40,Sim
+Valentina da Conceição,16530749810,9319483435,henry-gabriel38@example.org,C,M,5000.00,4.00,2,5408.00,2704.00,Sim
+Kaique Garcia,89725134664,1953440136,anna-lizcunha@example.com,D,F,3093.60,4.62,9,4645.12,516.12,Sim
+Ana Carolina Oliveira,54816309233,3371518105,ester55@example.org,V,M,2368.15,4.53,7,3229.21,461.32,Sim
+Dr. Carlos Eduardo Macedo,45607138208,930730806,macedoisaque@example.net,C,M,145.72,5.40,1,153.59,153.59,Sim
+Dr. Benjamim Ribeiro,73642518044,88635578,smoreira@example.com,C,M,5000.00,4.00,2,5408.00,2704.00,Sim
+Benjamin Mendonça,07123469534,8986867239,iviana@example.com,D,M,5000.00,4.00,2,5408.00,2704.00,Sim
+Danilo Camargo,63580421905,117285195,gustavo-henrique83@example.org,V,M,5000.00,4.00,2,5408.00,2704.00,Sim
+Fernanda Vargas,79581604294,624959924,samuelmacedo@example.net,S,F,5000.00,4.00,2,5408.00,2704.00,Sim
+Dr. Fernando Fogaça,60375214925,3835739248,liviacorreia@example.net,D,M,5000.00,4.00,2,5408.00,2704.00,Sim
+Maria Isis da Costa,15869237491,2097404578,qalbuquerque@example.org,S,F,5000.00,4.00,2,5408.00,2704.00,Sim
+Sr. Bento Albuquerque,36472058938,3867266593,ester53@example.org,C,M,5000.00,4.00,2,5408.00,2704.00,Sim
+João Gabriel Casa Grande,41238750680,5815948678,vitoriada-costa@example.net,V,M,5000.00,4.00,2,5408.00,2704.00,Sim
+Anthony Santos,98105376202,9258096199,cfogaca@example.org,S,M,5000.00,4.00,2,5408.00,2704.00,Sim
+Théo Dias,03261894750,8584627788,mnascimento@example.org,D,F,5000.00,4.00,2,5408.00,2704.00,Sim
+Bruna Jesus,82031456989,5055673220,fernanda24@example.net,D,F,5000.00,4.00,2,5408.00,2704.00,Sim
+Agatha Lima,27859061368,3499378603,cavalcantiyasmin@example.com,D,M,5000.00,4.00,2,5408.00,2704.00,Sim
+Emilly Nascimento,73691584209,1728977836,poliveira@example.net,S,F,5000.00,4.00,2,5408.00,2704.00,Sim
+Kaique Cunha,25369071470,8552232700,gmendonca@example.net,S,F,5000.00,4.00,2,5408.00,2704.00,Sim
+Srta. Allana Ferreira,21583790497,376281696,ksilveira@example.org,C,M,5000.00,4.00,2,5408.00,2704.00,Sim
+Isaac Lopes,65023798429,5040424370,vargasclara@example.com,D,M,5000.00,4.00,2,5408.00,2704.00,Sim
+Dr. João Guilherme Fonseca,20196375886,5802324863,da-motaaugusto@example.org,V,F,4188.64,3.20,11,5923.11,538.46,Não
+Ana Beatriz Moreira,94620813524,2741868651,josuealves@example.net,D,M,2071.31,3.41,2,2214.98,1107.49,Não
+Carolina Santos,03712568444,4144458262,scamara@example.org,C,M,5000.00,4.00,2,5408.00,2704.00,Sim
+Dante Rocha,07542368974,1330470245,da-cruzmaria-alice@example.net,C,M,5000.00,4.00,2,5408.00,2704.00,Sim
+Gael Garcia,05891436701,2576851347,kaiquecavalcante@example.org,C,M,5000.00,4.00,2,5408.00,2704.00,Sim
+Yago Rodrigues,39682407150,9113928044,olima@example.org,C,F,5000.00,4.00,2,5408.00,2704.00,Sim
+Rafael Correia,42685170308,6910531388,kaiquecasa-grande@example.net,V,F,8241.90,4.29,3,9348.79,3116.26,Sim
+Beatriz Caldeira,15462798300,7430066346,emanuella72@example.com,S,F,5000.00,4.00,2,5408.00,2704.00,Sim
+Samuel Andrade,46709128369,1957004016,ocaldeira@example.com,C,F,1347.98,5.50,1,1422.12,1422.12,Sim
+Felipe Rios,79028365400,515725461,iancamara@example.com,C,F,5000.00,4.00,2,5408.00,2704.00,Sim
+Sra. Maysa Costela,89265403756,5621687964,dante72@example.org,D,F,5000.00,4.00,2,5408.00,2704.00,Sim
+Marcela Garcia,80513267921,6305041462,wmoura@example.net,D,F,5000.00,4.00,2,5408.00,2704.00,Sim
+Gabriel Fonseca,62845913737,3205853534,allanasilveira@example.net,V,M,5000.00,4.00,2,5408.00,2704.00,Sim
+Francisco Silva,61549820702,8510113183,pereiraleonardo@example.net,D,M,5000.00,4.00,2,5408.00,2704.00,Sim
+Pedro Lucas Fogaça,02135896721,2763008848,maria-liz46@example.org,D,F,5000.00,4.00,2,5408.00,2704.00,Sim
